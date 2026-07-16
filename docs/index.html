@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AccessCatalog Agent — ADA compliance on autopilot</title>
+<style>
+  :root { color-scheme: light; }
+  * { margin: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+         background: #0d2a52; color: #fff; line-height: 1.6; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 3.5rem 1.5rem; }
+  .badge { display: inline-block; border: 2px solid #ffd24d; border-radius: 999px;
+           padding: .35rem 1.1rem; font-weight: 700; font-size: .95rem; margin-bottom: 1.6rem; }
+  h1 { font-size: 3rem; line-height: 1.15; }
+  h1 .gold { color: #ffd24d; }
+  .sub { color: #9fc0ee; font-size: 1.25rem; margin: 1rem 0 2.2rem; }
+  .btns a { display: inline-block; margin: 0 .8rem .8rem 0; padding: .8rem 1.6rem;
+            border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.05rem; }
+  .primary { background: #ffd24d; color: #0d2a52; }
+  .ghost { border: 2px solid #4d8de8; color: #fff; }
+  .loop { display: flex; flex-wrap: wrap; gap: .6rem; margin: 2.6rem 0; }
+  .step { border: 3px solid; border-radius: 12px; padding: .7rem 1.1rem;
+          background: #14335f; font-weight: 700; }
+  .b { border-color: #4d8de8; color: #4d8de8; }
+  .g { border-color: #46a758; color: #46a758; }
+  .y { border-color: #ffd24d; color: #ffd24d; }
+  .stats { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0 2.6rem; }
+  .stat { flex: 1 1 160px; background: #14335f; border-radius: 12px; padding: 1.1rem; text-align: center; }
+  .stat b { display: block; font-size: 2.4rem; color: #ffd24d; }
+  .stat span { color: #9fc0ee; font-size: .95rem; }
+  h2 { color: #9fc0ee; font-size: 1.15rem; text-transform: uppercase;
+       letter-spacing: .08em; margin: 2.6rem 0 .9rem; }
+  pre { background: #081c38; border-radius: 12px; padding: 1.2rem 1.4rem;
+        overflow-x: auto; font-size: .95rem; color: #cfe1ff; }
+  p  { color: #d9e6fb; }
+  footer { margin-top: 3rem; color: #7d9cc9; font-size: .9rem; }
+  a { color: #9fc0ee; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="badge">AccessCatalog Agent · DataHub Agent Hackathon</div>
+  <h1>ADA compliance,<br><span class="gold">on autopilot.</span></h1>
+  <p class="sub">An AI agent that scans, tags, and triages every government PDF —
+  reading the catalog through the DataHub MCP Server and writing every verdict back.
+  It runs every day, so people don't have to.</p>
+
+  <div class="btns">
+    <a class="primary" href="https://github.com/imeunk89/accesscatalog-agent">View the code (Apache 2.0)</a>
+    <a class="ghost" href="report.html">See a real agent-generated report</a>
+    <a class="ghost" href="https://github.com/imeunk89/accesscatalog-agent/tree/main/examples">Sample outputs</a>
+  </div>
+
+  <div class="loop">
+    <div class="step b">READ · MCP</div>
+    <div class="step b">SCAN · real PDF checks</div>
+    <div class="step g">WRITE BACK · tags + evidence</div>
+    <div class="step g">DECIDE · lineage</div>
+    <div class="step y">REPORT · live catalog</div>
+  </div>
+
+  <h2>One agent run on the sample city (22 documents)</h2>
+  <div class="stats">
+    <div class="stat"><b>22</b><span>documents scanned</span></div>
+    <div class="stat"><b>16</b><span>non-compliant found</span></div>
+    <div class="stat"><b>10</b><span>queued by impact</span></div>
+    <div class="stat"><b>2</b><span>redirects via lineage</span></div>
+  </div>
+
+  <h2>Run it yourself (~15 min)</h2>
+  <pre>git clone https://github.com/imeunk89/accesscatalog-agent && cd accesscatalog-agent
+uv venv --python 3.11 && source .venv/bin/activate
+uv pip install -e . mcp-server-datahub
+datahub docker quickstart          # local DataHub (Docker)
+cp .env.example .env               # add your OPENAI_API_KEY
+./scripts/demo.sh                  # ingest → agent → reports</pre>
+  <p>The 22-PDF sample corpus ships in the repo — genuinely accessible and inaccessible
+  files, including image-only scans and lineage-connected remediation pairs.</p>
+
+  <footer>Apache 2.0 · Built on DataHub, the open-source metadata platform ·
+  DataHub Agent Hackathon submission</footer>
+</div>
+</body>
+</html>
