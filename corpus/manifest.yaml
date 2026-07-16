@@ -1,0 +1,217 @@
+municipality: City of Rivergate
+base_url: https://rivergate.gov/documents
+departments:
+  Public Works:
+    owner: maria.gonzalez@rivergate.gov
+    slug: public-works
+  Parks & Recreation:
+    owner: james.okafor@rivergate.gov
+    slug: parks-recreation
+  Finance:
+    owner: susan.chen@rivergate.gov
+    slug: finance
+  City Clerk:
+    owner: dana.whitfield@rivergate.gov
+    slug: city-clerk
+  Health & Human Services:
+    owner: robert.kim@rivergate.gov
+    slug: health-human-services
+documents:
+- id: pw-row-permit-guide
+  title: Right-of-Way Permit Application Guide
+  department: Public Works
+  public_facing: true
+  url_path: /public-works/pw-row-permit-guide.pdf
+  file: corpus/pdfs/pw-row-permit-guide.pdf
+  published: '2025-11-03'
+  monthly_views: 1840
+  remediated_from: null
+- id: pw-standard-details-2026
+  title: Standard Construction Details 2026
+  department: Public Works
+  public_facing: true
+  url_path: /public-works/pw-standard-details-2026.pdf
+  file: corpus/pdfs/pw-standard-details-2026.pdf
+  published: '2026-01-15'
+  monthly_views: 960
+  remediated_from: null
+- id: pw-snow-plan
+  title: Snow and Ice Response Plan
+  department: Public Works
+  public_facing: true
+  url_path: /public-works/pw-snow-plan.pdf
+  file: corpus/pdfs/pw-snow-plan.pdf
+  published: '2024-10-20'
+  monthly_views: 2210
+  remediated_from: null
+- id: pw-fleet-policy
+  title: Fleet Vehicle Use Policy
+  department: Public Works
+  public_facing: false
+  url_path: /public-works/pw-fleet-policy.pdf
+  file: corpus/pdfs/pw-fleet-policy.pdf
+  published: '2025-06-11'
+  monthly_views: 45
+  remediated_from: null
+- id: pw-stormwater-bmp
+  title: Stormwater BMP Maintenance Handbook
+  department: Public Works
+  public_facing: true
+  url_path: /public-works/pw-stormwater-bmp.pdf
+  file: corpus/pdfs/pw-stormwater-bmp.pdf
+  published: '2025-08-29'
+  monthly_views: 530
+  remediated_from: null
+- id: pr-shelter-rental
+  title: Park Shelter Rental Rules and Fees
+  department: Parks & Recreation
+  public_facing: true
+  url_path: /parks-recreation/pr-shelter-rental.pdf
+  file: corpus/pdfs/pr-shelter-rental.pdf
+  published: '2026-02-01'
+  monthly_views: 3120
+  remediated_from: null
+- id: pr-summer-programs
+  title: Summer Recreation Program Catalog 2026
+  department: Parks & Recreation
+  public_facing: true
+  url_path: /parks-recreation/pr-summer-programs.pdf
+  file: corpus/pdfs/pr-summer-programs.pdf
+  published: '2026-04-15'
+  monthly_views: 4480
+  remediated_from: null
+- id: pr-tree-ordinance
+  title: Street Tree Ordinance Summary
+  department: Parks & Recreation
+  public_facing: true
+  url_path: /parks-recreation/pr-tree-ordinance.pdf
+  file: corpus/pdfs/pr-tree-ordinance.pdf
+  published: '2023-05-08'
+  monthly_views: 380
+  remediated_from: null
+- id: pr-volunteer-handbook
+  title: Volunteer Coach Handbook
+  department: Parks & Recreation
+  public_facing: false
+  url_path: /parks-recreation/pr-volunteer-handbook.pdf
+  file: corpus/pdfs/pr-volunteer-handbook.pdf
+  published: '2025-09-30'
+  monthly_views: 85
+  remediated_from: null
+- id: fin-budget-2026
+  title: Adopted Budget Fiscal Year 2026
+  department: Finance
+  public_facing: true
+  url_path: /finance/fin-budget-2026.pdf
+  file: corpus/pdfs/fin-budget-2026.pdf
+  published: '2025-12-18'
+  monthly_views: 1520
+  remediated_from: null
+- id: fin-budget-2026-remediated
+  title: Adopted Budget Fiscal Year 2026 (Accessible Edition)
+  department: Finance
+  public_facing: true
+  url_path: /finance/fin-budget-2026-remediated.pdf
+  file: corpus/pdfs/fin-budget-2026-remediated.pdf
+  published: '2026-03-02'
+  monthly_views: 640
+  remediated_from: fin-budget-2026
+- id: fin-vendor-w9-guide
+  title: Vendor Registration and W-9 Submission Guide
+  department: Finance
+  public_facing: true
+  url_path: /finance/fin-vendor-w9-guide.pdf
+  file: corpus/pdfs/fin-vendor-w9-guide.pdf
+  published: '2025-07-22'
+  monthly_views: 890
+  remediated_from: null
+- id: fin-acfr-2025
+  title: Annual Comprehensive Financial Report 2025
+  department: Finance
+  public_facing: true
+  url_path: /finance/fin-acfr-2025.pdf
+  file: corpus/pdfs/fin-acfr-2025.pdf
+  published: '2026-05-30'
+  monthly_views: 410
+  remediated_from: null
+- id: fin-pcard-policy
+  title: Purchasing Card Internal Policy
+  department: Finance
+  public_facing: false
+  url_path: /finance/fin-pcard-policy.pdf
+  file: corpus/pdfs/fin-pcard-policy.pdf
+  published: '2024-11-05'
+  monthly_views: 30
+  remediated_from: null
+- id: clk-council-minutes-jun
+  title: City Council Meeting Minutes — June 2026
+  department: City Clerk
+  public_facing: true
+  url_path: /city-clerk/clk-council-minutes-jun.pdf
+  file: corpus/pdfs/clk-council-minutes-jun.pdf
+  published: '2026-07-01'
+  monthly_views: 760
+  remediated_from: null
+- id: clk-council-minutes-jun-remediated
+  title: City Council Meeting Minutes — June 2026 (Accessible Edition)
+  department: City Clerk
+  public_facing: true
+  url_path: /city-clerk/clk-council-minutes-jun-remediated.pdf
+  file: corpus/pdfs/clk-council-minutes-jun-remediated.pdf
+  published: '2026-07-10'
+  monthly_views: 210
+  remediated_from: clk-council-minutes-jun
+- id: clk-public-records-guide
+  title: Public Records Request Guide
+  department: City Clerk
+  public_facing: true
+  url_path: /city-clerk/clk-public-records-guide.pdf
+  file: corpus/pdfs/clk-public-records-guide.pdf
+  published: '2026-01-08'
+  monthly_views: 1130
+  remediated_from: null
+- id: clk-election-poll-worker
+  title: Election Poll Worker Manual
+  department: City Clerk
+  public_facing: true
+  url_path: /city-clerk/clk-election-poll-worker.pdf
+  file: corpus/pdfs/clk-election-poll-worker.pdf
+  published: '2026-06-12'
+  monthly_views: 540
+  remediated_from: null
+- id: hhs-food-permit
+  title: Mobile Food Vendor Permit Requirements
+  department: Health & Human Services
+  public_facing: true
+  url_path: /health-human-services/hhs-food-permit.pdf
+  file: corpus/pdfs/hhs-food-permit.pdf
+  published: '2025-10-14'
+  monthly_views: 1660
+  remediated_from: null
+- id: hhs-inspection-checklist
+  title: Restaurant Inspection Self-Audit Checklist
+  department: Health & Human Services
+  public_facing: true
+  url_path: /health-human-services/hhs-inspection-checklist.pdf
+  file: corpus/pdfs/hhs-inspection-checklist.pdf
+  published: '2025-03-19'
+  monthly_views: 720
+  remediated_from: null
+- id: hhs-assistance-programs
+  title: Emergency Assistance Programs Overview
+  department: Health & Human Services
+  public_facing: true
+  url_path: /health-human-services/hhs-assistance-programs.pdf
+  file: corpus/pdfs/hhs-assistance-programs.pdf
+  published: '2026-02-20'
+  monthly_views: 2050
+  remediated_from: null
+- id: hhs-staff-bbp-plan
+  title: Bloodborne Pathogen Exposure Control Plan
+  department: Health & Human Services
+  public_facing: false
+  url_path: /health-human-services/hhs-staff-bbp-plan.pdf
+  file: corpus/pdfs/hhs-staff-bbp-plan.pdf
+  published: '2025-01-27'
+  monthly_views: 20
+  remediated_from: null

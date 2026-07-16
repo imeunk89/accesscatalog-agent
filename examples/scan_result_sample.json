@@ -1,0 +1,50 @@
+{
+  "file": "corpus/pdfs/pw-snow-plan.pdf",
+  "page_count": 1,
+  "compliant": false,
+  "critical_failures": 4,
+  "warnings": 1,
+  "score": 0,
+  "checks": [
+    {
+      "check_id": "tagged-pdf",
+      "name": "Tagged PDF structure",
+      "passed": false,
+      "severity": "critical",
+      "standard": "Section 508 E205 / WCAG 1.3.1",
+      "detail": "No tag structure: screen readers cannot determine headings, tables, or reading order."
+    },
+    {
+      "check_id": "doc-title",
+      "name": "Document title",
+      "passed": false,
+      "severity": "critical",
+      "standard": "Section 508 E205 / WCAG 2.4.2",
+      "detail": "No meaningful document title (found 'untitled')."
+    },
+    {
+      "check_id": "doc-language",
+      "name": "Primary language declared",
+      "passed": false,
+      "severity": "critical",
+      "standard": "Section 508 E205 / WCAG 3.1.1",
+      "detail": "No /Lang entry: screen readers cannot pick the correct speech synthesizer language."
+    },
+    {
+      "check_id": "display-doc-title",
+      "name": "Window title shows document title",
+      "passed": false,
+      "severity": "warning",
+      "standard": "PDF/UA-1 / supports WCAG 2.4.2",
+      "detail": "Viewer shows the filename instead of the title."
+    },
+    {
+      "check_id": "text-layer",
+      "name": "Real text layer (not a scan)",
+      "passed": false,
+      "severity": "critical",
+      "standard": "Section 508 E205 / WCAG 1.1.1, 1.4.5",
+      "detail": "Image-only pages with no text layer: 1. Likely an untreated scan."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[project]
+name = "accesscatalog-agent"
+version = "0.1.0"
+description = "DataHub-powered accessibility compliance agent for public-sector document catalogs (Section 508 / WCAG)"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "acryl-datahub>=1.0",
+    "pikepdf>=9.0",
+    "pypdf>=5.0",
+    "openai>=1.60",
+    "mcp>=1.2",
+    "jinja2>=3.1",
+    "pyyaml>=6.0",
+    "typer>=0.15",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+corpus = [
+    "weasyprint>=63",
+    "reportlab>=4.0",
+]
+
+[project.scripts]
+accesscatalog = "accesscatalog.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["accesscatalog"]

@@ -1,0 +1,163 @@
+{
+  "generated_at": "2026-07-16T14:26:04+00:00",
+  "municipality": "City of Rivergate",
+  "scanned": 22,
+  "queue": [
+    {
+      "position": 1,
+      "document_id": "pr-shelter-rental",
+      "title": "Park Shelter Rental Rules and Fees",
+      "department": "Parks & Recreation",
+      "owner": "james.okafor@rivergate.gov",
+      "public_facing": true,
+      "monthly_views": 3120,
+      "failed_checks": [
+        "tagged-pdf",
+        "doc-title",
+        "doc-language",
+        "display-doc-title"
+      ],
+      "rationale": "High-traffic public-facing Parks & Recreation document (~3120 monthly views) with critical accessibility failures (untagged PDF, no declared language, missing meaningful title). No accessible downstream edition exists in lineage; remediation is required so residents booking shelters can access rules and fees with assistive technology."
+    },
+    {
+      "position": 2,
+      "document_id": "pr-tree-ordinance",
+      "title": "Street Tree Ordinance Summary",
+      "department": "Parks & Recreation",
+      "owner": "james.okafor@rivergate.gov",
+      "public_facing": true,
+      "monthly_views": 380,
+      "failed_checks": [
+        "tagged-pdf",
+        "doc-title",
+        "doc-language",
+        "display-doc-title",
+        "text-layer"
+      ],
+      "rationale": "Public-facing Parks & Recreation document (~380 monthly views) that is an image-only, untagged PDF with missing language and title metadata. There is no downstream accessible edition; remediation is needed so residents can access tree ordinance requirements, especially those relying on screen readers."
+    },
+    {
+      "position": 3,
+      "document_id": "pw-snow-plan",
+      "title": "Snow and Ice Response Plan",
+      "department": "Public Works",
+      "owner": "maria.gonzalez@rivergate.gov",
+      "public_facing": true,
+      "monthly_views": 2210,
+      "failed_checks": [
+        "tagged-pdf",
+        "doc-title",
+        "doc-language",
+        "display-doc-title",
+        "text-layer"
+      ],
+      "rationale": "High-traffic Public Works emergency operations document (~2210 monthly views) that is an image-only, untagged PDF with missing language and title metadata. No accessible downstream edition exists; remediation is required so residents can access critical snow and ice response information during winter events."
+    },
+    {
+      "position": 4,
+      "document_id": "pw-row-permit-guide",
+      "title": "Right-of-Way Permit Application Guide",
+      "department": "Public Works",
+      "owner": "maria.gonzalez@rivergate.gov",
+      "public_facing": true,
+      "monthly_views": 1840,
+      "failed_checks": [
+        "tagged-pdf",
+        "doc-title",
+        "doc-language",
+        "display-doc-title"
+      ],
+      "rationale": "High-traffic Public Works permitting guide (~1840 monthly views) that is an untagged PDF with missing language and meaningful title. No accessible downstream edition exists; remediation is required so contractors and residents can understand right-of-way permit requirements using assistive technology."
+    },
+    {
+      "position": 5,
+      "document_id": "hhs-food-permit",
+      "title": "Mobile Food Vendor Permit Requirements",
+      "department": "Health & Human Services",
+      "owner": "robert.kim@rivergate.gov",
+      "public_facing": true,
+      "monthly_views": 1660,
+      "failed_checks": [
+        "tagged-pdf",
+        "doc-title",
+        "doc-language",
+        "display-doc-title"
+      ],
+      "rationale": "High-traffic Health & Human Services public-facing guide (~1660 monthly views) that is an untagged PDF with missing language and meaningful title. No accessible downstream edition exists; remediation is required so food vendors can meet permit requirements regardless of disability."
+    },
+    {
+      "position": 6,
+      "document_id": "fin-vendor-w9-guide",
+      "title": "Vendor Registration and W-9 Submission Guide",
+      "department": "Finance",
+      "owner": "susan.chen@rivergate.gov",
+      "public_facing": true,
+      "monthly_views": 890,
+      "failed_checks": [
+        "tagged-pdf",
+        "doc-title",
+        "doc-language",
+        "display-doc-title"
+      ],
+      "rationale": "High-traffic Finance public-facing guide (~890 monthly views) that is an untagged PDF with missing language and meaningful title. No accessible downstream edition exists; remediation is required so vendors with disabilities can successfully complete registration and W-9 submission."
+    },
+    {
+      "position": 7,
+      "document_id": "pw-stormwater-bmp",
+      "title": "Stormwater BMP Maintenance Handbook",
+      "department": "Public Works",
+      "owner": "maria.gonzalez@rivergate.gov",
+      "public_facing": true,
+      "monthly_views": 530,
+      "failed_checks": [
+        "doc-title",
+        "doc-language"
+      ],
+      "rationale": "Public Works public-facing technical handbook (~530 monthly views) that fails key metadata checks (no document language, no meaningful title). No accessible downstream edition exists; remediation will improve access for property owners and engineers maintaining stormwater BMPs."
+    },
+    {
+      "position": 8,
+      "document_id": "hhs-inspection-checklist",
+      "title": "Restaurant Inspection Self-Audit Checklist",
+      "department": "Health & Human Services",
+      "owner": "robert.kim@rivergate.gov",
+      "public_facing": true,
+      "monthly_views": 720,
+      "failed_checks": [
+        "doc-title",
+        "doc-language"
+      ],
+      "rationale": "Health & Human Services public-facing checklist (~720 monthly views) that fails document language and meaningful title checks. No accessible downstream edition exists; remediation is required so restaurant operators using assistive technology can self-audit against inspection criteria."
+    },
+    {
+      "position": 9,
+      "document_id": "fin-acfr-2025",
+      "title": "Annual Comprehensive Financial Report 2025",
+      "department": "Finance",
+      "owner": "susan.chen@rivergate.gov",
+      "public_facing": true,
+      "monthly_views": 410,
+      "failed_checks": [
+        "doc-title",
+        "doc-language"
+      ],
+      "rationale": "Finance public-facing financial report (~410 monthly views) that fails document language and meaningful title checks. No accessible downstream edition exists; remediation will ensure equitable access to the city\u2019s audited financial statements."
+    },
+    {
+      "position": 10,
+      "document_id": "clk-election-poll-worker",
+      "title": "Election Poll Worker Manual",
+      "department": "City Clerk",
+      "owner": "dana.whitfield@rivergate.gov",
+      "public_facing": true,
+      "monthly_views": 540,
+      "failed_checks": [
+        "tagged-pdf",
+        "doc-title",
+        "doc-language",
+        "display-doc-title"
+      ],
+      "rationale": "City Clerk public-facing training manual (~540 monthly views) that is an untagged PDF with missing language and meaningful title. No accessible downstream edition exists; remediation is required so prospective and current poll workers with disabilities can access instructions on election-day procedures."
+    }
+  ]
+}

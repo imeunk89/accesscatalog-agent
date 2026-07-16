@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Env / secrets
+.env
+*.key
+
+# OS
+.DS_Store
+
+# Claude Code session files
+.claude/
+
+# Generated artifacts (kept out of git — curated copies live in examples/)
+reports/
+
+# Demo video working files (final video lives on YouTube)
+video/
