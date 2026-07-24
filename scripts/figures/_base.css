@@ -1,0 +1,38 @@
+/* Shared visual language for AccessCatalog Agent figures.
+   Same palette as docs/index.html (the GitHub Pages landing). */
+:root {
+  --navy:   #0d2a52;
+  --navy-2: #14335f;
+  --navy-3: #081c38;
+  --gold:   #ffd24d;
+  --blue:   #4d8de8;
+  --muted:  #9fc0ee;
+  --text:   #d9e6fb;
+  --green:  #46a758;
+  --red:    #e5544b;
+  color-scheme: dark;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: var(--navy);
+  background-image:
+    radial-gradient(900px 420px at 12% -8%, rgba(77,141,232,.28), transparent 62%),
+    radial-gradient(760px 400px at 96% 108%, rgba(255,210,77,.12), transparent 60%);
+  color: #fff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.frame { padding: 54px 60px; }
+.badge {
+  display: inline-block; border: 2px solid var(--gold); color: var(--gold);
+  border-radius: 999px; padding: .3rem 1.05rem;
+  font-weight: 700; font-size: 15px; letter-spacing: .01em;
+}
+.eyebrow {
+  color: var(--muted); font-size: 14px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .14em;
+}
+.gold  { color: var(--gold); }
+.mono  { font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace; }
+.card  { background: var(--navy-2); border: 1px solid rgba(159,192,238,.22); border-radius: 14px; }

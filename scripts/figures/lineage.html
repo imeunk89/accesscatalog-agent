@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { width: 1200px; height: 660px; overflow: hidden; }
+  .frame { padding: 40px 60px; }
+  h2 { font-size: 27px; letter-spacing: -.01em; margin: 8px 0 4px; }
+  .lede { color: var(--muted); font-size: 15px; margin-bottom: 24px; }
+
+  .row { display: grid; grid-template-columns: 1fr 190px 1fr; align-items: stretch; gap: 0; }
+  .doc { padding: 18px 22px; }
+  .doc .id { font-size: 13px; color: var(--muted); }
+  .doc .name { font-size: 19px; font-weight: 700; margin: 3px 0 10px; min-height: 58px; }
+  .doc .name span { display: block; color: var(--muted); font-weight: 600; font-size: 17px; }
+  .pill { display: inline-block; border-radius: 999px; padding: .16rem .68rem;
+          font-size: 12.5px; font-weight: 700; }
+  .bad  { background: rgba(229,84,75,.16); color: var(--red);   border: 1px solid rgba(229,84,75,.55); }
+  .good { background: rgba(70,167,88,.16); color: var(--green); border: 1px solid rgba(70,167,88,.55); }
+  .meta { margin-top: 14px; font-size: 13.5px; color: var(--text); }
+  .meta div { display: flex; gap: 10px; margin-top: 4px; }
+  .meta .k { color: var(--muted); flex: 0 0 118px; }
+  .meta .v { flex: 1; }
+  .fails { color: var(--red); font-size: 12.5px; }
+
+  .link { text-align: center; align-self: center; }
+  .link .line { height: 2px; background: linear-gradient(90deg, rgba(159,192,238,.25), var(--gold), rgba(159,192,238,.25)); }
+  .link .lbl { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 7px; }
+  .link .api { font-size: 12px; color: var(--muted); margin-top: 7px; }
+
+  .call { margin-top: 26px; background: var(--navy-3); border-radius: 13px;
+          border: 1px solid rgba(159,192,238,.22); padding: 18px 22px;
+          font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+          font-size: 14px; line-height: 1.65; white-space: pre; }
+  .call .p  { color: var(--gold); }
+  .call .fn { color: var(--blue); }
+  .call .st { color: var(--red); font-weight: 700; }
+  .call .str{ color: var(--text); }
+  .call .cm { color: var(--muted); }
+
+  .foot { margin-top: 20px; font-size: 15px; color: var(--text); }
+  .foot b { color: var(--gold); }
+</style></head>
+<body><div class="frame">
+  <div class="eyebrow">Lineage-aware judgment</div>
+  <h2>The decision only a catalog can make</h2>
+  <p class="lede">Before queueing anything, the agent asks DataHub what this document became.
+  Sometimes the fix already exists.</p>
+
+  <div class="row">
+    <div class="card doc">
+      <div class="id mono">fin-budget-2026</div>
+      <div class="name">Adopted Budget<span>Fiscal Year 2026</span></div>
+      <span class="pill bad">508-non-compliant</span>
+      <div class="meta">
+        <div><span class="k">Department</span><span class="v">Finance · Susan Chen</span></div>
+        <div><span class="k">Public-facing</span><span class="v">yes · ~1,520 views / month</span></div>
+        <div><span class="k">Score</span><span class="v">23 / 100</span></div>
+        <div><span class="k">Failed checks</span><span class="v fails mono">tagged-pdf, doc-title,<br>doc-language, display-doc-title</span></div>
+      </div>
+    </div>
+
+    <div class="link">
+      <div class="lbl">DataHub lineage</div>
+      <div class="line"></div>
+      <div class="api mono">get_lineage()</div>
+    </div>
+
+    <div class="card doc">
+      <div class="id mono">fin-budget-2026-remediated</div>
+      <div class="name">Adopted Budget FY 2026<span>(Accessible Edition)</span></div>
+      <span class="pill good">508-compliant</span>
+      <div class="meta">
+        <div><span class="k">Department</span><span class="v">Finance · Susan Chen</span></div>
+        <div><span class="k">Public-facing</span><span class="v">yes</span></div>
+        <div><span class="k">Score</span><span class="v">100 / 100</span></div>
+        <div><span class="k">Critical failures</span><span class="v" style="color:var(--green)">0 — nothing to remediate</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="call"><span class="p">›</span> <span class="fn">queue_remediation</span>(document_id=<span class="str">"fin-budget-2026"</span>)
+  { <span class="st">"rejected"</span>: <span class="str">"fin-budget-2026"</span>,
+    <span class="st">"reason"</span>: <span class="str">"Catalog lineage shows an accessible edition already exists</span>
+              <span class="str">downstream. Recommend a URL redirect instead of queueing."</span> }
+<span class="cm">  # enforced in the tool, not the prompt — accesscatalog/agent/tools.py</span></div>
+
+  <p class="foot">Outcome: <b>redirect the public URL, remediation budget untouched.</b>
+  A scanner that only looks at the file would have queued this document twice.</p>
+</div></body></html>

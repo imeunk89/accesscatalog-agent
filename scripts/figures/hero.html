@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { width: 1200px; height: 600px; overflow: hidden; }
+  h1 { font-size: 62px; line-height: 1.08; letter-spacing: -.02em; margin: 22px 0 14px; }
+  .sub { color: var(--text); font-size: 19px; max-width: 780px; }
+  .loop { display: flex; gap: 10px; margin: 30px 0 26px; }
+  .step {
+    border: 2px solid; border-radius: 11px; padding: .5rem .85rem;
+    background: rgba(20,51,95,.75); font-weight: 700; font-size: 14.5px; white-space: nowrap;
+  }
+  .step small { display: block; font-weight: 600; font-size: 11.5px; opacity: .78; letter-spacing: .02em; }
+  .b { border-color: var(--blue);  color: var(--blue); }
+  .g { border-color: var(--green); color: var(--green); }
+  .y { border-color: var(--gold);  color: var(--gold); }
+  .stats { display: flex; gap: 14px; }
+  .stat { flex: 1; padding: 14px 18px; }
+  .stat b { display: block; font-size: 40px; line-height: 1.1; color: var(--gold); letter-spacing: -.02em; }
+  .stat span { color: var(--muted); font-size: 13.5px; }
+  .runline {
+    position: absolute; right: 60px; top: 56px; text-align: right;
+    color: var(--muted); font-size: 13px;
+  }
+</style></head>
+<body><div class="frame">
+  <div class="badge">DataHub Agent Hackathon · Agents That Do Real Work</div>
+  <div class="runline mono">one agent run<br>City of Rivergate · 22 documents</div>
+
+  <h1>ADA compliance,<br><span class="gold">on autopilot.</span></h1>
+  <p class="sub">An agent that reads a government document catalog through the DataHub MCP Server,
+  runs real PDF accessibility scans, and writes every verdict, evidence trail and queue
+  decision back into the catalog.</p>
+
+  <div class="loop">
+    <div class="step b">READ<small>DataHub MCP</small></div>
+    <div class="step b">SCAN<small>real PDF internals</small></div>
+    <div class="step g">WRITE BACK<small>tags + evidence</small></div>
+    <div class="step g">DECIDE<small>lineage-aware</small></div>
+    <div class="step y">REPORT<small>live catalog state</small></div>
+  </div>
+
+  <div class="stats">
+    <div class="card stat"><b>22</b><span>documents scanned</span></div>
+    <div class="card stat"><b>16</b><span>non-compliant found</span></div>
+    <div class="card stat"><b>10</b><span>queued by impact</span></div>
+    <div class="card stat"><b>2</b><span>redirects via lineage</span></div>
+  </div>
+</div></body></html>

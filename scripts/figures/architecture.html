@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { width: 1200px; height: 700px; overflow: hidden; }
+  .frame { padding: 40px 60px; }
+  h2 { font-size: 27px; letter-spacing: -.01em; margin: 8px 0 4px; }
+  .lede { color: var(--muted); font-size: 15px; margin-bottom: 22px; }
+
+  .hub { padding: 18px 26px; border-color: rgba(255,210,77,.5); }
+  .hub .title { font-size: 19px; font-weight: 800; color: var(--gold); }
+  .hub .title span { font-weight: 600; font-size: 14px; color: var(--muted); margin-left: 10px; }
+  .chips { display: flex; gap: 9px; margin-top: 12px; flex-wrap: wrap; }
+  .chip { border: 1px solid rgba(159,192,238,.4); border-radius: 8px; padding: .28rem .7rem;
+          font-size: 13.5px; color: var(--text); background: rgba(8,28,56,.55); }
+
+  .rails { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 16px 0; }
+  .rail { text-align: center; }
+  .rail .arrow { font-size: 30px; line-height: 1; }
+  .rail .lbl { font-size: 14.5px; font-weight: 700; margin-top: 2px; }
+  .rail .api { font-size: 12.5px; color: var(--muted); }
+  .down { color: var(--blue); }
+  .up   { color: var(--green); }
+
+  .agent { padding: 20px 26px; border-color: rgba(77,141,232,.5); }
+  .agent .title { font-size: 19px; font-weight: 800; margin-bottom: 14px; }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .s { background: rgba(8,28,56,.7); border-radius: 11px; padding: 12px 13px;
+       border-top: 3px solid var(--blue); }
+  .s:nth-child(3), .s:nth-child(4) { border-top-color: var(--green); }
+  .s:nth-child(5) { border-top-color: var(--gold); }
+  .s b { display: block; font-size: 13.5px; margin-bottom: 4px; }
+  .s span { font-size: 12.5px; color: var(--muted); line-height: 1.4; display: block; }
+  .n { font-size: 11.5px; color: var(--gold); font-weight: 800; }
+
+  .foot { margin-top: 20px; font-size: 14px; color: var(--text); text-align: center; }
+  .foot b { color: var(--gold); }
+</style></head>
+<body><div class="frame">
+  <div class="eyebrow">Architecture</div>
+  <h2>The catalog is the compliance system of record</h2>
+  <p class="lede">Every fact the agent learns lands back in DataHub — so the next person, or the next
+  agent run, inherits verified knowledge instead of starting over.</p>
+
+  <div class="card hub">
+    <div class="title">DataHub <span>documents platform · datasets, domains, owners</span></div>
+    <div class="chips">
+      <div class="chip">Tags — <span class="mono">unscanned · 508-compliant · 508-non-compliant · in-remediation</span></div>
+      <div class="chip">Ownership per document</div>
+      <div class="chip">Custom properties — scan evidence</div>
+      <div class="chip">Lineage — original → remediated edition</div>
+    </div>
+  </div>
+
+  <div class="rails">
+    <div class="rail down">
+      <div class="arrow">▼</div>
+      <div class="lbl">reads via DataHub MCP Server</div>
+      <div class="api mono">search · get_entities · get_lineage</div>
+    </div>
+    <div class="rail up">
+      <div class="arrow">▲</div>
+      <div class="lbl">writes back via DataHub Python SDK</div>
+      <div class="api mono">tags · properties · lineage · queue state</div>
+    </div>
+  </div>
+
+  <div class="card agent">
+    <div class="title">AccessCatalog Agent <span class="mono" style="font-size:13px;color:var(--muted);font-weight:600">OpenAI Agents SDK</span></div>
+    <div class="steps">
+      <div class="s"><span class="n">01</span><b>Inventory</b><span>find every <span class="mono">unscanned</span> document via MCP search</span></div>
+      <div class="s"><span class="n">02</span><b>Scan</b><span>real PDF internals: tags, /Lang, title, text layer</span></div>
+      <div class="s"><span class="n">03</span><b>Write back</b><span>verdict tag + evidence onto the dataset</span></div>
+      <div class="s"><span class="n">04</span><b>Decide</b><span>check lineage before spending remediation budget</span></div>
+      <div class="s"><span class="n">05</span><b>Report</b><span>rendered from live catalog state, never local files</span></div>
+    </div>
+  </div>
+
+  <p class="foot">Prompt instructions guide the agent. <b>Tools enforce the rules</b> —
+  <span class="mono">queue_remediation</span> rejects compliant, internal, or already-remediated documents.</p>
+</div></body></html>
